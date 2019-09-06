@@ -8,6 +8,12 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * The GridWriter is made to generate a PNG image from the "Grid".
+ * It overwrite the image "saved.png" at the root folder of the project.
+ *
+ * It is marked as @Component to be able to @Autowired it.
+ */
 @Component
 public class GridWriter {
 

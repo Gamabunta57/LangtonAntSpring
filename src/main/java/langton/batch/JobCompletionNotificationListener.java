@@ -7,6 +7,12 @@ import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.listener.JobExecutionListenerSupport;
 import org.springframework.stereotype.Component;
 
+/**
+ * This listener is based on Spring's Boot tutorials.
+ * They used one so do I. But indeed, in this state, it's almost useless.
+ *
+ * It is mark as @Component for the IoC container and automatically use it in LangtonJob class.
+ */
 @Component
 public class JobCompletionNotificationListener extends JobExecutionListenerSupport {
 

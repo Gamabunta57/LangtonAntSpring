@@ -1,10 +1,11 @@
 package langton.core;
 
-import org.springframework.stereotype.Component;
-
 import java.util.HashSet;
 
-@Component
+/**
+ * The class that holds the grid data for the algorithm.
+ * It uses HashSet to hold the "black" cells only and it allows us to have an "infinite" grid.
+ */
 public class Grid {
 
     private HashSet<Vector2> cells;
@@ -31,7 +32,7 @@ public class Grid {
         if(isCellSet(coordinates))
             cells.remove(coordinates);
         else{
-            cells.add(new Vector2(coordinates));
+            cells.add(new Vector2(coordinates)); // the new makes a copy and avoid having multiple Vector2 with the same coordinates.
             updateArea(coordinates);
         }
     }

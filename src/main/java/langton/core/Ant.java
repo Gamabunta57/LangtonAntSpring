@@ -1,8 +1,8 @@
 package langton.core;
 
-import org.springframework.stereotype.Component;
-
-@Component
+/**
+ * The Ant for the Langton's ant algorithm.
+ */
 public class Ant {
 
     private Vector2 position;

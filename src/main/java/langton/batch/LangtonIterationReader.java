@@ -1,17 +1,18 @@
 package langton.batch;
 
 import org.springframework.batch.item.ItemReader;
-import org.springframework.batch.item.NonTransientResourceException;
-import org.springframework.batch.item.ParseException;
-import org.springframework.batch.item.UnexpectedInputException;
 
+/**
+ * This class has been made to hold the number of iteration and give it back to a job.
+ * IMO, it's a "huge" thing just to get 1 data.
+ */
 public class LangtonIterationReader implements ItemReader<Long> {
 
     private Long iteration;
     private boolean hasGivenValue = false;
 
     @Override
-    public Long read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {
+    public Long read(){
         if(hasGivenValue)
             return null;
 

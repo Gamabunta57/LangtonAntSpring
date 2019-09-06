@@ -14,6 +14,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * It is the Web entry point
+ *
+ * It waits for a call at "/run" with an parameter "iteration"
+ * Then it runs a Job that apply the Langont's ant with "iteration" as a parameter.
+ */
 @RestController
 public class LangtonRunController {
 

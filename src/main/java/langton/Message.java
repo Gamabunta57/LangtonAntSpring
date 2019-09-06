@@ -1,5 +1,8 @@
 package langton;
 
+/**
+ * A simple class to be able to send a message via the RestController.
+ */
 public class Message {
     private boolean isSuccess;
     private String message;

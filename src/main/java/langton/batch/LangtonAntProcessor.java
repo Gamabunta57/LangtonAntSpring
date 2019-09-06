@@ -7,12 +7,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.item.ItemProcessor;
 
+/**
+ * This is the Langton's ant algorithm handler.
+ * It runs the algorithm with a given number of iteration.
+ */
 public class LangtonAntProcessor  implements ItemProcessor<Long, Grid> {
 
     private static final Logger log = LoggerFactory.getLogger(LangtonAntProcessor.class);
 
     @Override
-    public Grid process(Long iteration) throws Exception {
+    public Grid process(Long iteration) {
         Grid grid = new Grid();
         Ant ant = new Ant();
 
